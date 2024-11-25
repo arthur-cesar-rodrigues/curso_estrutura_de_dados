@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="calculadora" onclick="calcular()">
+    <h1 id="calc"></h1>
+    <script>
+        function calcular() {
+            var x
+            var valor1 = prompt("Digite o 1º valor")// parseInt=converte a a variavel para inteiro
+            var valor2 = prompt("Digite o 2º valor")
+
+            if (valor1 == "" || valor2== "") {
+            // === extremamente igual -> o valor tem que ser igual e o tipo de variavel tambem
+            //||= e
+            //&& = ou
+            //!== = negando
+                x = "Valor indefinido!!!"
+            } else {
+                x = valor1 * valor2
+            }
+            document.getElementById("calc").innerHTML = x 
+            //prompt recebe string
+        }
+    </script>
+</body>
+</html>
